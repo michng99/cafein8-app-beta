@@ -20,29 +20,25 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Signup from "./src/components/Signup";
 import Detail_order from './src/components/Detail_order';
-
+import Mycart from "./src/components/Mycart";
 import { StackNavigator } from "react-navigation";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Fogot_password from './src/components/Fogot_password';
-
+import HomePage from './src/components/HomePage';
+import Appnavigator from './src/components/Appnavigator';
 
 const Stack = createNativeStackNavigator();
 
 const App  =  () => {
   return(
-    //<Signup/>
-    //<Detail_order/>
-    <Fogot_password/>
-    // <View>
-    //   <NavigationContainer>
-    //     <Stack.Screen name = "Signup" component={Signup}/>
-    //   </NavigationContainer>
-    // </View>
+    <NavigationContainer>
+      <Appnavigator/>
+    </NavigationContainer>
   );
-  
 };
+
 
 const styles = StyleSheet.create({
   sectionContainer: {
